@@ -79,14 +79,17 @@ const Home = () => {
         <div className="banner-top">CPD Provider of the Year Winner!</div>
         <Container>
           <Row>
-            <Col xs={6}>
+            <Col xs={12} md={6} className="px-4">
               <div className="banner-info">
-                <h3>Online health and social care training that fits around you</h3>
-                <p>
+                <h3>
+                  Online <span className="highlight">health</span> and social care training that
+                  fits around you
+                </h3>
+                <p className="banner-desc">
                   Innovative, flexible and affordable e-learning for health and social care
                   providers. Learn any time, any place.
                 </p>
-                <InputGroup className="mb-3">
+                <InputGroup className="d-none d-md-flex mb-3">
                   <Form.Control
                     placeholder="What do you want to learn ?"
                     aria-label="Recipient's username"
@@ -96,26 +99,28 @@ const Home = () => {
                     <img src={Search} alt="" />
                   </Button>
                 </InputGroup>
-                <div className="d-flex">
-                  <Button variant="warning" className="text-white me-3">
-                    FInd Out More
-                  </Button>
-                  <div className="d-flex">
-                    <img className="me-1" src={PhoneCall} alt="" />
-                    <div>
-                      <span className="text-secondary">Have any Question?</span>
-                      <h6>0203 9292013</h6>
+                <div className="d-flex justify-content-between">
+                  <div className="d-flex flex-column flex-md-row">
+                    <Button variant="warning" className="text-white me-md-3">
+                      FInd Out More
+                    </Button>
+                    <div className="d-flex mt-3 mt-md-0">
+                      <img className="call-img me-1" src={PhoneCall} alt="" />
+                      <div>
+                        <span className="text-secondary">Have any Question?</span>
+                        <h6>0203 9292013</h6>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="total-courses">
-                  <img src={Note} alt="" />
-                  <span className="">Total Courses</span>
-                  <h2 className="m-0">35+</h2>
+                  <div className="total-courses">
+                    <img src={Note} alt="" />
+                    <span className="">Total Courses</span>
+                    <h2 className="m-0">35+</h2>
+                  </div>
                 </div>
               </div>
             </Col>
-            <Col xs={6}>
+            <Col xs={12} md={6}>
               <div className="banner-img"></div>
             </Col>
           </Row>
@@ -132,7 +137,7 @@ const Home = () => {
           <Row>
             {topCategories.map((category) => {
               return (
-                <Col className="category-card" xs={4} key={category.title}>
+                <Col className="category-card" xs={12} md={4} key={category.title}>
                   <Card>
                     <img src={category.icon} alt="" />
                     <div>
@@ -156,7 +161,7 @@ const Home = () => {
               <Row>
                 {[...Array(8)].map((_, i) => {
                   return (
-                    <Col className="courses-card" xs={3} key={i}>
+                    <Col className="courses-card" xs={12} md={3} key={i}>
                       <CourseCard footer timing="45-60 Min" />
                     </Col>
                   );
@@ -183,26 +188,26 @@ const Home = () => {
       <section className="feature-section">
         <Container>
           <Row>
-            <Col xs={12} md={4}>
-              <div className="d-flex align-items-center">
+            <Col xs={12} md={4} className="mb-5 m-md-0">
+              <div className="d-flex flex-column flex-md-row align-items-center">
                 <img src={Feature1} alt="" />
-                <h6 className="fw-bold">
+                <h6 className="fw-bold text-center text-md-start m-0">
                   Learn over <br /> 35 + Courses{" "}
                 </h6>
               </div>
             </Col>
-            <Col xs={12} md={4}>
-              <div className="d-flex align-items-center">
+            <Col xs={12} md={4} className="mb-5 m-md-0">
+              <div className="d-flex flex-column flex-md-row align-items-center">
                 <img src={Feature2} alt="" />
-                <h6 className="fw-bold">
+                <h6 className="fw-bold text-center text-md-start m-0">
                   Earn certificates <br /> After Completeion{" "}
                 </h6>
               </div>
             </Col>
             <Col xs={12} md={4}>
-              <div className="d-flex align-items-center">
+              <div className="d-flex flex-column flex-md-row align-items-center">
                 <img src={Feature3} alt="" />
-                <h6 className="fw-bold m-0">
+                <h6 className="fw-bold text-center text-md-start m-0">
                   Learn from anywhere. <br /> any time
                 </h6>
               </div>
@@ -250,10 +255,10 @@ const Home = () => {
             <br />
             About My Academy
           </h2>
-          <Row>
+          <Row className="testimonials-wrapper">
             {[...Array(3)].map((_, i) => {
               return (
-                <Col xs={12} md={4} className="testimonials-card">
+                <Col xs={12} md={4} className="testimonials-card mb-3">
                   <Card>
                     <Card.Header className="d-flex align-items-center px-1">
                       <Image src={User} roundedCircle className="user-img me-2" />
@@ -289,7 +294,7 @@ const Home = () => {
           <Row>
             {[...Array(4)].map((_, i) => {
               return (
-                <Col className="courses-card" xs={3} key={i}>
+                <Col className="courses-card" xs={12} md={3} key={i}>
                   <CourseCard timing="Jan 24, 2024" />
                 </Col>
               );
@@ -308,7 +313,7 @@ const Home = () => {
                 We’ve More Then 235+ <br />
                 Global <span>Partners</span>
               </h2>
-              <Button variant="link" className="text-decoration-none ps-0">
+              <Button variant="link" className="text-decoration-none ps-0 mb-3 mb-md-0">
                 View More Partners <Image src={RightArrow} />
               </Button>
             </Col>
@@ -317,7 +322,7 @@ const Home = () => {
                 {partnerImages.map((img, i) => {
                   return (
                     <Col xs={4} md={4} className="text-center mb-3">
-                      <Image src={img} className="p-2" />
+                      <Image src={img} className="mw-100 p-2" />
                     </Col>
                   );
                 })}

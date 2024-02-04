@@ -1,5 +1,6 @@
-@import url("bootstrap.css");
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import "bootstrap.css";
+@import "~bootstrap/scss/bootstrap-grid.scss";
+@import "https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap";
 
 @mixin navLink {
   .nav-link {
@@ -54,8 +55,19 @@ body {
   border: none;
 }
 
+.highlight {
+  color: rgba(255, 155, 37, 1);
+}
+
 .section {
   padding: 3rem 0;
+  @include media-breakpoint-down(md) {
+    padding: 2rem 0;
+  }
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
   &.even {
     background-color: #f7f8fc;
   }
@@ -90,6 +102,9 @@ body {
     rgba(14, 36, 111, 1) 100%
   );
   padding-bottom: 0;
+  @include media-breakpoint-down(md) {
+    padding: 0 1.5rem;
+  }
 }
 
 // navbar
@@ -117,6 +132,9 @@ footer {
   color: #ffffff;
   .footer-top {
     padding: 5rem 0;
+    @include media-breakpoint-down(md) {
+      padding: 3rem 1.5rem;
+    }
     h6 {
       font-weight: 600;
       margin-bottom: 1rem;
@@ -180,6 +198,10 @@ footer {
       justify-content: space-between;
       align-items: center;
       padding: 0.75rem 1rem;
+      @include media-breakpoint-down(md) {
+        padding: 2rem 1rem;
+        justify-content: center;
+      }
       ul {
         display: flex;
         align-items: center;
@@ -199,9 +221,13 @@ footer {
         border-radius: 50%;
         padding: 0.5rem;
         margin-top: -3rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        @include media-breakpoint-down(md) {
+          margin-top: -5rem;
+        }
+
         img {
           background: #01cc83;
           border-radius: 50%;

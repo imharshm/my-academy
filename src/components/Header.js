@@ -40,9 +40,9 @@ const Header = () => {
           <img alt="" src={logo} width="30" height="30" className="d-inline-block align-top me-2" />
           My Academy
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse>
-          <NavDropdown title="Categories" className="mx-4">
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" className="border-0 p-0" />
+        <Navbar.Collapse className="mt-3">
+          <NavDropdown title="Categories" className="mx-md-4">
             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
@@ -58,7 +58,7 @@ const Header = () => {
               );
             })}
           </Nav>
-          <Nav>
+          <Nav className="d-flex flex-row mt-3 mt-md-0">
             <Button variant="primary" className="me-2">
               Sign In
             </Button>
