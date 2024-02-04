@@ -1,0 +1,168 @@
+// home
+.home-banner {
+  color: #ffffff;
+  background: url("../../assets/img/banner/banner-red-dots.svg") 45% 20% no-repeat,
+    url("../../assets/img/banner/banner-plus.svg") top 20% right 10% no-repeat,
+    url("../../assets/img/banner/banner-arrow.svg") bottom 20% left 35% no-repeat,
+    linear-gradient(rgba(48, 81, 193, 0.7), rgba(48, 81, 193, 0.7)),
+    url("../../assets/img/banner/banner-bg.svg") top left no-repeat;
+  position: relative;
+  .banner-top {
+    background: #ff9b25;
+    color: #ffffff;
+    padding: 0.5rem;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .banner-info {
+    max-width: 370px;
+    padding: 7rem 0;
+  }
+  .total-courses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    color: #000000;
+    border-radius: 15px;
+    width: 120px;
+    padding: 1rem 0.5rem;
+    position: absolute;
+    top: 40%;
+    right: 50%;
+    img {
+      width: 35px;
+    }
+  }
+  .banner-action {
+    position: absolute;
+    right: 1rem;
+    bottom: 0;
+  }
+  .banner-img {
+    background: url("../../assets/img/banner/banner-small.svg") bottom/500px no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.category-card {
+  margin-bottom: 1.5rem;
+  .card {
+    padding: 1rem 2rem;
+    flex-direction: row;
+    .desc {
+      font-size: 14px;
+    }
+  }
+  img {
+    width: 35px;
+    margin-right: 0.5rem;
+  }
+}
+
+.courses-card {
+  margin-bottom: 1.5rem;
+  .card {
+    box-shadow: 0px 15px 50px 0px rgba(0, 0, 0, 0.07);
+    border: none;
+    .badge {
+      color: #ff9b25;
+      background: rgba(255, 155, 37, 0.12);
+      font-weight: 400;
+    }
+    .rating {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+    }
+    .timing {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      img {
+        width: 18px;
+      }
+    }
+    .card-footer {
+      border-color: #ebebeb;
+      background: transparent;
+      button {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.feature-section {
+  background: var(--primary);
+  color: #ffffff;
+  padding: 2rem;
+  img {
+    width: 50px;
+    margin-right: 0.75rem;
+  }
+}
+
+// why choose us
+.why-choose-us__info {
+  max-width: 450px;
+  .why-choose__ul {
+    padding: 0;
+    li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      &::before {
+        content: "";
+        background: url("../../assets/img/check.svg") no-repeat;
+        display: block;
+        width: 18px;
+        height: 18px;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+// testimonials
+.testimonials-card {
+  .card {
+    background: #f9fafd;
+    padding: 1rem;
+    .card-header {
+      background: transparent;
+    }
+    .user-img {
+      width: 50px;
+    }
+  }
+}
+
+// sign up offer
+.sign-up-offer__wrapper {
+  &.container {
+    max-width: 1050px;
+  }
+  img {
+    max-width: 100%;
+  }
+  .sign-up-offer__info {
+    background-color: #ffffff;
+    padding: 2rem;
+    .form-control {
+      border-width: 0 0 1px;
+      border-radius: 0;
+      background: transparent;
+      &:focus {
+        box-shadow: none;
+        background: transparent;
+      }
+    }
+  }
+}
