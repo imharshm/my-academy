@@ -1,16 +1,5 @@
 import React from "react";
-import {
-  Container,
-  Row,
-  Col,
-  InputGroup,
-  Form,
-  Button,
-  Card,
-  Tabs,
-  Tab,
-  Image,
-} from "react-bootstrap";
+import { Container, Row, Col, InputGroup, Form, Button, Card, Image } from "react-bootstrap";
 import Search from "../../assets/img/banner/search.svg";
 import PhoneCall from "../../assets/img/banner/phonecall.svg";
 import Note from "../../assets/img/banner/notes.svg";
@@ -35,7 +24,8 @@ import Partner5 from "../../assets/img/partner-5.svg";
 import Partner6 from "../../assets/img/partner-6.svg";
 import SingUpOffer from "../../assets/img/sing-up-offer.svg";
 import "./home.scss";
-import CourseCard from "../common/CourseCard";
+import CourseCard from "../Common/CourseCard";
+import CoursesTab from "../Common/CoursesTab";
 
 const Home = () => {
   const topCategories = [
@@ -156,28 +146,7 @@ const Home = () => {
           <h2 className="section-title">
             Featured <span>Courses</span>
           </h2>
-          <Tabs defaultActiveKey="home" className="mb-3" justify>
-            <Tab eventKey="home" title="Home">
-              <Row>
-                {[...Array(8)].map((_, i) => {
-                  return (
-                    <Col className="courses-card" xs={12} md={3} key={i}>
-                      <CourseCard footer timing="45-60 Min" />
-                    </Col>
-                  );
-                })}
-              </Row>
-            </Tab>
-            <Tab eventKey="profile" title="Profile">
-              Tab content for Profile
-            </Tab>
-            <Tab eventKey="longer-tab" title="Loooonger Tab">
-              Tab content for Loooonger Tab
-            </Tab>
-            <Tab eventKey="contact" title="Contact" disabled>
-              Tab content for Contact
-            </Tab>
-          </Tabs>
+          <CoursesTab />
           <div className="text-center mt-3">
             <Button variant="warning" className="text-white">
               Browse all Courses
@@ -258,7 +227,7 @@ const Home = () => {
           <Row className="testimonials-wrapper">
             {[...Array(3)].map((_, i) => {
               return (
-                <Col xs={12} md={4} className="testimonials-card mb-3">
+                <Col key={i} xs={12} md={4} className="testimonials-card mb-3">
                   <Card>
                     <Card.Header className="d-flex align-items-center px-1">
                       <Image src={User} roundedCircle className="user-img me-2" />
@@ -321,7 +290,7 @@ const Home = () => {
               <Row>
                 {partnerImages.map((img, i) => {
                   return (
-                    <Col xs={4} md={4} className="text-center mb-3">
+                    <Col key={img} xs={4} md={4} className="text-center mb-3">
                       <Image src={img} className="mw-100 p-2" />
                     </Col>
                   );

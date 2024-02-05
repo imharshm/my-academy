@@ -1,6 +1,7 @@
 @import "bootstrap.css";
 @import "~bootstrap/scss/bootstrap-grid.scss";
 @import "https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined";
 
 @mixin navLink {
   .nav-link {
@@ -63,11 +64,12 @@ body {
   padding: 3rem 0;
   @include media-breakpoint-down(md) {
     padding: 2rem 0;
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
   }
-  .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
+
   &.even {
     background-color: #f7f8fc;
   }
@@ -78,6 +80,7 @@ body {
     span {
       position: relative;
       z-index: 1;
+      display: inline-block;
       &::before {
         content: "";
         background: url("../img/title-bg.svg") center/100% no-repeat;
@@ -102,8 +105,58 @@ body {
     rgba(14, 36, 111, 1) 100%
   );
   padding-bottom: 0;
+  padding-left: 4rem;
+  padding-right: 4rem;
   @include media-breakpoint-down(md) {
     padding: 0 1.5rem;
+    .container {
+      padding: 0;
+    }
+  }
+}
+
+.header-bg {
+  background: linear-gradient(rgba(14, 36, 111, 0.7), rgba(14, 36, 111, 0.7)),
+    url("../img/header-bg.svg") center/cover no-repeat;
+  .navbar {
+    background-color: transparent;
+    .nav-link {
+      color: #ffffff;
+      &.active {
+        color: #ffffff;
+        &::before {
+          background: url("../img/heart-light.svg");
+        }
+      }
+    }
+    .navbar-toggler {
+      .navbar-toggler-icon {
+        @include media-breakpoint-down(md) {
+          filter: invert(1) brightness(16) saturate(0.5);
+        }
+      }
+    }
+    .header-input {
+      width: 300px;
+      border: 1px solid rgba(143, 155, 193, 1);
+      border-radius: 10px;
+      input,
+      input::placeholder {
+        color: #ffffff;
+        font-size: 14px;
+        background-color: transparent;
+        border: none;
+      }
+    }
+  }
+  .desc {
+    color: #a7c8ff;
+  }
+  .title-container {
+    padding: 7rem;
+    @include media-breakpoint-down(md) {
+      padding: 4rem 0 7rem;
+    }
   }
 }
 
@@ -118,12 +171,33 @@ body {
   .nav-link {
     margin: 0 0.5rem;
   }
+  .navbar-toggler {
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
 }
 
 // tab
 .nav-tabs {
   border: none;
   @include navLink();
+  .nav-item {
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}
+
+.featured-course__tab {
+  display: flex;
+  justify-content: center;
+  @include media-breakpoint-down(md) {
+    white-space: nowrap;
+    overflow: auto hidden;
+    flex-wrap: nowrap;
+  }
 }
 
 // footer
@@ -235,5 +309,12 @@ footer {
         }
       }
     }
+  }
+}
+
+// font sizes
+@for $i from 10 to 50 {
+  .font-#{$i} {
+    font-size: #{$i}px;
   }
 }

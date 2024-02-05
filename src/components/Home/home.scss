@@ -128,8 +128,9 @@
     .card-footer {
       border-color: #ebebeb;
       background: transparent;
-      button {
+      .view-details-a {
         font-size: 14px;
+        color: var(--primary);
       }
     }
   }

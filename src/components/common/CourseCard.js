@@ -1,10 +1,11 @@
 import React from "react";
-import { Row, Button, Card, Badge } from "react-bootstrap";
+import { Row, Card, Badge } from "react-bootstrap";
 import CourseImg from "../../assets/img/course-1.svg";
 import Star from "../../assets/img/star.svg";
 import Clock from "../../assets/img/clock-gray.svg";
 import Books from "../../assets/img/books.svg";
 import RightArrow from "../../assets/img/right-arrow.svg";
+import { Link } from "react-router-dom";
 
 const CourseCard = ({ footer, timing }) => {
   return (
@@ -40,9 +41,13 @@ const CourseCard = ({ footer, timing }) => {
               <small>9 Modules</small>
             </div>
             <div className="col py-2 text-center">
-              <Button variant="link" className="text-decoration-none p-0">
+              <Link
+                to="/AllCourses/CourseDetails"
+                variant="link"
+                className="text-decoration-none view-details-a p-0"
+              >
                 View Details <img src={RightArrow} alt="" />
-              </Button>
+              </Link>
             </div>
           </Row>
         </Card.Footer>
