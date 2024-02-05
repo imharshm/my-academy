@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my-academy/static/css/main.7b272f87.css",
-    "main.js": "/my-academy/static/js/main.9cb36b2c.js",
+    "main.js": "/my-academy/static/js/main.a0028a3f.js",
     "static/js/592.577b9e07.chunk.js": "/my-academy/static/js/592.577b9e07.chunk.js",
     "static/media/banner-small.svg": "/my-academy/static/media/banner-small.75f8edd62043f70e615f.svg",
     "static/media/detailed-course.svg": "/my-academy/static/media/detailed-course.8544a65b416b3138e6645968f1e979be.svg",
@@ -61,11 +61,11 @@
     "static/media/top-arrow.svg": "/my-academy/static/media/top-arrow.76a6f0a5e5e11d22e962d07d4e3710bd.svg",
     "static/media/title-bg.svg": "/my-academy/static/media/title-bg.392691d10385d9fca1dc.svg",
     "main.7b272f87.css.map": "/my-academy/static/css/main.7b272f87.css.map",
-    "main.9cb36b2c.js.map": "/my-academy/static/js/main.9cb36b2c.js.map",
+    "main.a0028a3f.js.map": "/my-academy/static/js/main.a0028a3f.js.map",
     "592.577b9e07.chunk.js.map": "/my-academy/static/js/592.577b9e07.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7b272f87.css",
-    "static/js/main.9cb36b2c.js"
+    "static/js/main.a0028a3f.js"
   ]
 }
