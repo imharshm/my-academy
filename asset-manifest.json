@@ -1,9 +1,11 @@
 {
   "files": {
-    "main.css": "/my-academy/static/css/main.5503276e.css",
-    "main.js": "/my-academy/static/js/main.d03c13ed.js",
+    "main.css": "/my-academy/static/css/main.7b272f87.css",
+    "main.js": "/my-academy/static/js/main.9cb36b2c.js",
     "static/js/592.577b9e07.chunk.js": "/my-academy/static/js/592.577b9e07.chunk.js",
     "static/media/banner-small.svg": "/my-academy/static/media/banner-small.75f8edd62043f70e615f.svg",
+    "static/media/detailed-course.svg": "/my-academy/static/media/detailed-course.8544a65b416b3138e6645968f1e979be.svg",
+    "static/media/header-bg.svg": "/my-academy/static/media/header-bg.fef486b598a78712854a.svg",
     "static/media/sing-up-offer.svg": "/my-academy/static/media/sing-up-offer.e5e8e5f0b7227c901b016c836a849df6.svg",
     "static/media/course-1.svg": "/my-academy/static/media/course-1.ebd826fe3df0d445a24edf8ca05d4b66.svg",
     "static/media/banner-bg.svg": "/my-academy/static/media/banner-bg.aa25e9de072ebed57576.svg",
@@ -30,12 +32,17 @@
     "static/media/banner-red-dots.svg": "/my-academy/static/media/banner-red-dots.e8d73fa15dbc38bde1ad.svg",
     "static/media/notes.svg": "/my-academy/static/media/notes.60d93d003ac950e560ac528b1081e84e.svg",
     "static/media/category-3.svg": "/my-academy/static/media/category-3.7ccc69572f088bb84c13a6089d8d76ea.svg",
+    "static/media/syllabus.svg": "/my-academy/static/media/syllabus.ecd191fb5e607406b929db16cc173ef9.svg",
+    "static/media/course-dec.svg": "/my-academy/static/media/course-dec.65f169e946c8b8357b76f60b89b0ce64.svg",
+    "static/media/right-hand.svg": "/my-academy/static/media/right-hand.e4741963fbb73db9ab6170367a7f80aa.svg",
     "static/media/category-5.svg": "/my-academy/static/media/category-5.6dbdabd6f351a0ee5aa841e9cb438455.svg",
     "static/media/category-6.svg": "/my-academy/static/media/category-6.0f5cb5d1f7b872cd4f60bc12c2dec338.svg",
     "static/media/category-1.svg": "/my-academy/static/media/category-1.96ec730c04770f0440dae35e45ffd353.svg",
     "static/media/phone.svg": "/my-academy/static/media/phone.4e334a6790a19335d526.svg",
+    "static/media/target.svg": "/my-academy/static/media/target.103a22cfeee0cfbe3a2a4cd825cf6a13.svg",
     "static/media/books.svg": "/my-academy/static/media/books.459d0633f3ff83dabdd265d47d4f459a.svg",
     "static/media/phonecall.svg": "/my-academy/static/media/phonecall.fb9f2c96e42b13288f59a3409617f880.svg",
+    "static/media/lock.svg": "/my-academy/static/media/lock.07be981fa33a9990ef6046974cb4e579.svg",
     "static/media/star.svg": "/my-academy/static/media/star.e2232ffd6afcca93d809eb1b9e6be7e0.svg",
     "static/media/linkedin.svg": "/my-academy/static/media/linkedin.5088f2779cd3efa73cc0313dffaa321e.svg",
     "static/media/clock.svg": "/my-academy/static/media/clock.d3603579e061bd5b1cf8.svg",
@@ -43,20 +50,22 @@
     "static/media/ig.svg": "/my-academy/static/media/ig.a1cef0e18bfd2fd64b3ce3ac282f6223.svg",
     "static/media/envelope.svg": "/my-academy/static/media/envelope.30119406999969861b84.svg",
     "static/media/fb.svg": "/my-academy/static/media/fb.decc2433d9946bc0e813c115284a76cf.svg",
+    "static/media/heart-light.svg": "/my-academy/static/media/heart-light.e57712bf6327fc792ba8.svg",
     "static/media/heart.svg": "/my-academy/static/media/heart.d74f885643b07feb7d4d.svg",
     "index.html": "/my-academy/index.html",
+    "static/media/play.svg": "/my-academy/static/media/play.3293e206748f838973e62b8b62ac163c.svg",
     "static/media/search.svg": "/my-academy/static/media/search.4da91c9ee0c3b36631672e6fff61f5c9.svg",
     "static/media/clock-gray.svg": "/my-academy/static/media/clock-gray.03c4a3057591805c111a20f6f8ec96ee.svg",
     "static/media/right-arrow.svg": "/my-academy/static/media/right-arrow.2f1c006e7d4ff61f6496099093c7dcf0.svg",
     "static/media/check.svg": "/my-academy/static/media/check.c0606f5e54938bff37d7.svg",
     "static/media/top-arrow.svg": "/my-academy/static/media/top-arrow.76a6f0a5e5e11d22e962d07d4e3710bd.svg",
     "static/media/title-bg.svg": "/my-academy/static/media/title-bg.392691d10385d9fca1dc.svg",
-    "main.5503276e.css.map": "/my-academy/static/css/main.5503276e.css.map",
-    "main.d03c13ed.js.map": "/my-academy/static/js/main.d03c13ed.js.map",
+    "main.7b272f87.css.map": "/my-academy/static/css/main.7b272f87.css.map",
+    "main.9cb36b2c.js.map": "/my-academy/static/js/main.9cb36b2c.js.map",
     "592.577b9e07.chunk.js.map": "/my-academy/static/js/592.577b9e07.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5503276e.css",
-    "static/js/main.d03c13ed.js"
+    "static/css/main.7b272f87.css",
+    "static/js/main.9cb36b2c.js"
   ]
 }
