@@ -11,38 +11,35 @@ const Header = () => {
   const pathname = useLocation().pathname;
 
   return (
-    <Container fluid className={classNames("p-0", { "header-bg": pathname !== "/Home" })}>
+    <Container fluid className={classNames("p-0", { "header-bg": pathname !== "/" })}>
       <Navbar collapseOnSelect expand="lg">
         <Container>
           <Navbar.Brand href="#home">
             <img
               alt=""
-              src={pathname === "/Home" ? logo : logoLight}
+              src={pathname === "/" ? logo : logoLight}
               width="30"
               height="30"
               className="d-inline-block align-top me-2"
             />
-            {pathname === "/Home" && "My Academy"}
+            {pathname === "/" && "My Academy"}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" className="border-0 p-0" />
           <Navbar.Collapse className="mt-3 mt-md-0">
-            <NavDropdown
-              title="Categories"
-              className={classNames({ "mx-md-4": pathname === "/Home" })}
-            >
+            <NavDropdown title="Categories" className={classNames({ "mx-md-4": pathname === "/" })}>
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
             </NavDropdown>
-            <Nav className={pathname === "/Home" ? "me-auto" : "me-3"}>
+            <Nav className={pathname === "/" ? "me-auto" : "me-3"}>
               {menuList.map((menu) => {
                 console.log(menu.replace(/[-\s]/g, ""));
                 return (
                   <Link
                     className={classNames("nav-link", { active: pathname === `/${menu}` })}
-                    to={menu.replace(/[-\s]/g, "")}
+                    to={menu === "Home" ? "/" : menu.replace(/[-\s]/g, "")}
                     key={menu}
                   >
                     {menu}
@@ -51,7 +48,7 @@ const Header = () => {
               })}
             </Nav>
             <Nav className="d-flex flex-row mt-3 mt-md-0 ms-auto">
-              {pathname === "/Home" && (
+              {pathname === "/" && (
                 <>
                   <Button variant="primary" className="me-2">
                     Sign In
@@ -61,7 +58,7 @@ const Header = () => {
                   </Button>
                 </>
               )}
-              {pathname !== "/Home" && (
+              {pathname !== "/" && (
                 <>
                   <InputGroup className="header-input">
                     <Form.Control
@@ -82,7 +79,7 @@ const Header = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      {pathname !== "/Home" && (
+      {pathname !== "/" && (
         <Container className="title-container text-center">
           <h1 className="fw-bold text-white">All Courses</h1>
           <p className="desc d-none d-md-block">Below is a list of all available courses</p>
