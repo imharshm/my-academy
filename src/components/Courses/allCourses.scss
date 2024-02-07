@@ -151,3 +151,22 @@
   right: 1rem;
   top: -2rem;
 }
+
+.my-course__card {
+  &.card {
+    background: url("../../assets/img/detailed-course.svg") top center/100% no-repeat;
+    border: none;
+    border-radius: 0;
+    .card-header {
+      border: none;
+    }
+    .card-body {
+      border-radius: 15px;
+      box-shadow: 0px 7px 35px 0px rgba(0, 0, 0, 0.1);
+      background: #fff;
+      margin: 1rem;
+      margin-top: 5rem;
+      padding-bottom: 0;
+    }
+  }
+}
