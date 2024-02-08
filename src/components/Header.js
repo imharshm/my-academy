@@ -35,7 +35,6 @@ const Header = () => {
             </NavDropdown>
             <Nav className={pathname === "/" ? "me-auto" : "me-3"}>
               {menuList.map((menu) => {
-                console.log(menu.replace(/[-\s]/g, ""));
                 return (
                   <Link
                     className={classNames("nav-link", { active: pathname === `/${menu}` })}
@@ -85,7 +84,7 @@ const Header = () => {
           <p className="desc d-none d-md-block">Below is a list of all available courses</p>
           <ul className="d-flex align-items-center justify-content-center list-unstyled m-0 p-0">
             <li className="text-white me-3">Home</li>
-            <span className="text-white me-3">{">>"}</span>
+            <i className="material-icons text-white me-3">keyboard_double_arrow_right</i>
             <li className="highlight">All Courses</li>
           </ul>
         </Container>

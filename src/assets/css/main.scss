@@ -1,7 +1,7 @@
 @import "bootstrap.css";
 @import "~bootstrap/scss/bootstrap-grid.scss";
 @import "https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap";
-@import "https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Symbols+Outlined";
 
 @mixin navLink {
   .nav-link {
@@ -85,7 +85,7 @@ body {
         content: "";
         background: url("../img/title-bg.svg") center/100% no-repeat;
         width: 100%;
-        height: 20px;
+        height: 15px;
         display: block;
         position: absolute;
         right: 0;
@@ -113,6 +113,16 @@ body {
       padding: 0;
     }
   }
+}
+
+.light-gray-section {
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #ffffff 50%,
+    rgba(247, 248, 252, 1) 50%,
+    rgba(247, 248, 252, 1) 100%
+  );
 }
 
 .header-bg {
@@ -205,7 +215,7 @@ footer {
   background: #0e246f;
   color: #ffffff;
   .footer-top {
-    padding: 5rem 0;
+    padding: 3rem 0;
     @include media-breakpoint-down(md) {
       padding: 3rem 1.5rem;
     }
@@ -301,7 +311,6 @@ footer {
         @include media-breakpoint-down(md) {
           margin-top: -5rem;
         }
-
         img {
           background: #01cc83;
           border-radius: 50%;
@@ -316,5 +325,43 @@ footer {
 @for $i from 10 to 50 {
   .font-#{$i} {
     font-size: #{$i}px;
+  }
+}
+
+// about page
+.about-banner {
+  height: 100%;
+  max-width: 600px;
+  background: url("../img/about/about-1.svg") top 24px left 180px/150px no-repeat,
+    url("../img/about/about-dots.svg") top 0% left 156px no-repeat,
+    url("../img/about/about-2.svg") bottom 0% left 180px/150px no-repeat,
+    url("../img/about/about-3.svg") bottom 0% right 0%/200px no-repeat,
+    linear-gradient(rgba(255, 155, 37, 1), rgba(255, 155, 37, 1)) bottom 0 left 0%/80px 120px
+      no-repeat,
+    linear-gradient(rgba(35, 77, 202, 1), rgba(35, 77, 202, 1)) top 0 right 20px/80px 80px no-repeat;
+  @include media-breakpoint-down(md) {
+    height: 300px;
+  }
+}
+
+.get-help {
+  position: absolute;
+  bottom: 0;
+  left: -7rem;
+  @include media-breakpoint-down(md) {
+    bottom: -3.5rem;
+    left: 1rem;
+    img {
+      transform: rotate(-90deg);
+      margin-right: 1rem;
+      width: 40px;
+    }
+  }
+}
+
+.team-member-img {
+  @include media-breakpoint-down(md) {
+    margin: auto;
+    max-width: 280px;
   }
 }
