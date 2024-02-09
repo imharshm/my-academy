@@ -7,7 +7,7 @@ const WriteUs = () => {
       <Container>
         <div className="write-us__wrapper">
           <div className="write-us__info">
-            <h4 className="fw-bold me-2 me-md-5">
+            <h4 className="fw-bold me-2 me-md-5 mb-0">
               If you cannot find a training session that you require, please get in touch with us
             </h4>
             <Button variant="light" className="text-nowrap">

@@ -44,7 +44,8 @@ body {
 }
 
 // common
-.form-control {
+.form-control,
+.form-select {
   &:focus {
     box-shadow: none;
   }
@@ -363,5 +364,87 @@ footer {
   @include media-breakpoint-down(md) {
     margin: auto;
     max-width: 280px;
+  }
+}
+
+.accordion {
+  .accordion-item {
+    border: none;
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+    .accordion-header {
+      .accordion-button {
+        background: #f7f8fc;
+        border-radius: 10px;
+        box-shadow: none;
+        outline: none;
+        &::after {
+          content: "\e145";
+          font-family: "Material Icons";
+          font-size: 18px;
+          background: none;
+        }
+        &:not(.collapsed) {
+          font-weight: bold;
+          color: var(--primary);
+          border-radius: 10px 10px 0 0;
+          &::after {
+            content: "\e15b";
+          }
+        }
+      }
+    }
+    .accordion-body {
+      background: #f7f8fc;
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+// faq
+.faq-form {
+  .form-control,
+  .form-select {
+    border-width: 0 0 1px;
+    border-radius: 0;
+    background: transparent;
+    padding-left: 0;
+    padding-right: 1.5rem;
+    resize: none;
+  }
+  .form-field {
+    position: relative;
+    &::after {
+      font-family: "Material Icons Outlined";
+      position: absolute;
+      right: 1rem;
+      top: 0.5rem;
+    }
+  }
+  .fname {
+    &::after {
+      content: "\e7ff";
+    }
+  }
+  .mobile {
+    &::after {
+      content: "\e0cd";
+    }
+  }
+  .subject {
+    &::after {
+      content: "\e5cf";
+    }
+  }
+  .email {
+    &::after {
+      content: "\e0be";
+    }
+  }
+  .description {
+    &::after {
+      content: "\e3c9";
+    }
   }
 }

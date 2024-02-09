@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Card, Container, ProgressBar, Table } from "react-bootstrap";
-import WriteUs from "../Common/WriteUs";
 
 const CoursesDetails = () => {
   return (
@@ -87,7 +86,6 @@ const CoursesDetails = () => {
           </div>
         </Container>
       </section>
-      <WriteUs />
     </>
   );
 };

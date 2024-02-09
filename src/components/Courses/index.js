@@ -2,7 +2,6 @@ import React from "react";
 import { Button, Container } from "react-bootstrap";
 import CoursesTab from "../Common/CoursesTab";
 import "./allCourses.scss";
-import WriteUs from "../Common/WriteUs";
 
 const index = () => {
   return (
@@ -18,7 +17,6 @@ const index = () => {
           <CoursesTab />
         </Container>
       </section>
-      <WriteUs />
     </>
   );
 };

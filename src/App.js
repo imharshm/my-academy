@@ -8,6 +8,8 @@ import DetailedCourse from "./components/Courses/DetailedCourse";
 import MyCourses from "./components/Courses/MyCourses";
 import CoursesDetails from "./components/Courses/CoursesDetails";
 import About from "./components/About";
+import Blog from "./components/Blog";
+import FAQs from "./components/FAQs";
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
         <Route path="/AllCourses/CourseDetails" exact element={<DetailedCourse />} />
         <Route path="/MyCourses" exact element={<MyCourses />} />
         <Route path="/CoursesDetails" exact element={<CoursesDetails />} />
+        <Route path="/Blog" exact element={<Blog />} />
+        <Route path="/Faq" exact element={<FAQs />} />
       </Routes>
       <Footer />
     </Router>

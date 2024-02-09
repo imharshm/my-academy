@@ -6,8 +6,10 @@ import LinkedIn from "../assets/img/linkedin.svg";
 import TopArrow from "../assets/img/top-arrow.svg";
 import Logo from "../assets/img/logo-light.svg";
 import DummyImg from "../assets/img/dummy-1.svg";
+import WriteUs from "./Common/WriteUs";
+import { useLocation } from "react-router";
 
-const Footer = () => {
+const Footer = ({ writeUs }) => {
   const coursesList = [
     {
       name: "Life Coach",
@@ -34,8 +36,11 @@ const Footer = () => {
       title: "",
     },
   ];
+  const pathname = useLocation().pathname;
+
   return (
     <footer>
+      {pathname !== "/" && <WriteUs />}
       <Container>
         <Row className="footer-top">
           <Col xs={12} md={9}>

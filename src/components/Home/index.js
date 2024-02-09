@@ -15,10 +15,10 @@ import Feature2 from "../../assets/img/feature-2.svg";
 import Feature3 from "../../assets/img/feature-3.svg";
 import SingUpOffer from "../../assets/img/sing-up-offer.svg";
 import "./home.scss";
-import CourseCard from "../Common/CourseCard";
 import CoursesTab from "../Common/CoursesTab";
 import Testimonial from "../Common/Testimonial";
 import GlobalPartners from "../Common/GlobalPartners";
+import Blog from "../Blog";
 
 const Home = () => {
   const topCategories = [
@@ -205,25 +205,7 @@ const Home = () => {
           </Row>
         </Container>
         <Testimonial />
-        <Container>
-          <div className="text-center">
-            <Button variant="outline-primary" className="btn-txt-primary mb-3">
-              New Blog
-            </Button>
-          </div>
-          <h2 className="section-title">
-            News &amp; <span>Blogs</span>
-          </h2>
-          <Row>
-            {[...Array(4)].map((_, i) => {
-              return (
-                <Col className="courses-card" xs={12} md={3} key={i}>
-                  <CourseCard timing="Jan 24, 2024" />
-                </Col>
-              );
-            })}
-          </Row>
-        </Container>
+        <Blog />
       </section>
       <section className="section even">
         <Container>

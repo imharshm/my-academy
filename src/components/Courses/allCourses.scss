@@ -4,17 +4,24 @@
   background: var(--primary);
   color: #ffffff;
   border-radius: 15px;
-  padding: 3rem 7rem;
+  height: 180px;
   display: flex;
   justify-content: center;
   @include media-breakpoint-down(md) {
-    padding: 2rem;
+    height: 120px;
+    padding: 1.2rem;
   }
   .write-us__info {
     max-width: 650px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    h4 {
+      line-height: 1.5;
+      @include media-breakpoint-down(md) {
+        font-size: 14px;
+      }
+    }
   }
 }
 

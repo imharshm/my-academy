@@ -1,6 +1,5 @@
 import React from "react";
 import { Badge, Button, Card, Col, Container, ProgressBar, Row } from "react-bootstrap";
-import WriteUs from "../Common/WriteUs";
 import Books from "../../assets/img/books.svg";
 import Notes from "../../assets/img/notepad.svg";
 
@@ -53,7 +52,6 @@ const MyCourses = () => {
           </Row>
         </Container>
       </section>
-      <WriteUs />
     </>
   );
 };

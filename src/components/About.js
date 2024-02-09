@@ -1,12 +1,10 @@
 import React from "react";
 import { Button, Card, Col, Container, Image, Row } from "react-bootstrap";
-import WriteUs from "./Common/WriteUs";
 import Book from "../assets/img/book.svg";
 import Team from "../assets/img/team.svg";
-import VideoImg from "../assets/img/banner/banner-bg.svg";
-import CurveArrow from "../assets/img/curve-arrow.svg";
 import Testimonial from "./Common/Testimonial";
 import GlobalPartners from "./Common/GlobalPartners";
+import GetHelpVideo from "./Courses/GetHelpVideo";
 
 const About = () => {
   return (
@@ -108,21 +106,7 @@ const About = () => {
               );
             })}
           </Row>
-          <Row className="mt-4 pb-5 pb-md-0">
-            <Col md={7} className="mx-auto position-relative">
-              <div className="d-flex flex-md-column align-items-end get-help">
-                <Image src={CurveArrow} width={50} />
-                <span className="text-secondary text-nowrap">
-                  Get <b className="text-dark">help</b> from <br /> this video
-                </span>
-              </div>
-              <Card className="border-0 shadow">
-                <Card.Body>
-                  <Image src={VideoImg} className="mw-100" />
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
+          <GetHelpVideo />
         </Container>
         <Testimonial />
       </section>
@@ -131,7 +115,6 @@ const About = () => {
           <GlobalPartners />
         </Container>
       </section>
-      <WriteUs />
     </>
   );
 };

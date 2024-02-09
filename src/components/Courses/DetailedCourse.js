@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Card, Col, Container, Image, ProgressBar, Row, Table } from "react-bootstrap";
-import WriteUs from "../Common/WriteUs";
 import CourseDesc from "../../assets/img/course-dec.svg";
 import Target from "../../assets/img/target.svg";
 import Syllabus from "../../assets/img/syllabus.svg";
@@ -289,7 +288,6 @@ const DetailedCourse = () => {
           </Row>
         </Container>
       </section>
-      <WriteUs />
     </>
   );
 };
