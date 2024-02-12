@@ -150,7 +150,7 @@ const FAQs = () => {
                       name="group1"
                       type="radio"
                       id="agree"
-                      className="mb-3 mb-md-0"
+                      className="mb-3 mb-md-0 order-md-1"
                     />
                   </Form.Group>
                 </Row>

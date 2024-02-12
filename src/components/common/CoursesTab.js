@@ -9,7 +9,7 @@ const CoursesTab = () => {
         <Row>
           {[...Array(8)].map((_, i) => {
             return (
-              <Col className="courses-card" xs={12} md={3} key={i}>
+              <Col className="courses-card" xs={12} md={4} lg={3} key={i}>
                 <CourseCard footer timing="45-60 Min" />
               </Col>
             );

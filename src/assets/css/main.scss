@@ -142,7 +142,7 @@ body {
     }
     .navbar-toggler {
       .navbar-toggler-icon {
-        @include media-breakpoint-down(md) {
+        @include media-breakpoint-down(lg) {
           filter: invert(1) brightness(16) saturate(0.5);
         }
       }
@@ -183,6 +183,7 @@ body {
     margin: 0 0.5rem;
   }
   .navbar-toggler {
+    border: none;
     &:focus {
       outline: none;
       box-shadow: none;

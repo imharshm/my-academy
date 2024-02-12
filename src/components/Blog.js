@@ -17,7 +17,7 @@ const Blog = () => {
         <Row>
           {[...Array(4)].map((_, i) => {
             return (
-              <Col className="courses-card" xs={12} md={3} key={i}>
+              <Col className="courses-card" xs={12} md={4} lg={3} key={i}>
                 <CourseCard timing="Jan 24, 2024" />
               </Col>
             );

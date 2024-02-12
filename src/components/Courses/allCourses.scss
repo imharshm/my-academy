@@ -7,7 +7,8 @@
   height: 180px;
   display: flex;
   justify-content: center;
-  @include media-breakpoint-down(md) {
+  padding: 1.5rem;
+  @include media-breakpoint-down(lg) {
     height: 120px;
     padding: 1.2rem;
   }
@@ -18,7 +19,7 @@
     justify-content: space-evenly;
     h4 {
       line-height: 1.5;
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-down(lg) {
         font-size: 14px;
       }
     }

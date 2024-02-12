@@ -70,7 +70,7 @@ const Home = () => {
                   Innovative, flexible and affordable e-learning for health and social care
                   providers. Learn any time, any place.
                 </p>
-                <InputGroup className="d-none d-md-flex mb-3">
+                <InputGroup className="d-none d-lg-flex mb-3">
                   <Form.Control
                     placeholder="What do you want to learn ?"
                     aria-label="Recipient's username"
@@ -81,7 +81,7 @@ const Home = () => {
                   </Button>
                 </InputGroup>
                 <div className="d-flex justify-content-between">
-                  <div className="d-flex flex-column flex-md-row">
+                  <div className="d-flex flex-column flex-lg-row">
                     <Button variant="warning" className="text-white me-md-3">
                       FInd Out More
                     </Button>
@@ -118,7 +118,7 @@ const Home = () => {
           <Row>
             {topCategories.map((category) => {
               return (
-                <Col className="category-card" xs={12} md={4} key={category.title}>
+                <Col className="category-card" xs={12} md={4} lg={3} key={category.title}>
                   <Card>
                     <img src={category.icon} alt="" />
                     <div>

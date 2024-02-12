@@ -1,19 +1,28 @@
 import React from "react";
 import classNames from "classnames";
 import { Link, useLocation } from "react-router-dom";
-import { Button, Container, Form, InputGroup, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import {
+  Button,
+  Container,
+  Form,
+  InputGroup,
+  Nav,
+  Navbar,
+  NavDropdown,
+  Offcanvas,
+} from "react-bootstrap";
 import logo from "../assets/img/logo.svg";
 import logoLight from "../assets/img/logo-light.svg";
 import Search from "../assets/img/banner/search.svg";
 
 const Header = () => {
-  const menuList = ["Home", "All Courses", "About", "Blog", "FQA's", "My Profile", "Contact Us"];
+  const menuList = ["Home", "All Courses", "About", "Blog", "FAQ's", "My Profile", "Contact Us"];
   const pathname = useLocation().pathname;
 
   return (
     <Container fluid className={classNames("p-0", { "header-bg": pathname !== "/" })}>
-      <Navbar collapseOnSelect expand="lg">
-        <Container>
+      <Navbar collapseOnSelect expand="xl">
+        <Container className="p-0">
           <Navbar.Brand href="#home">
             <img
               alt=""
@@ -24,58 +33,70 @@ const Header = () => {
             />
             {pathname === "/" && "My Academy"}
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" className="border-0 p-0" />
-          <Navbar.Collapse className="mt-3 mt-md-0">
-            <NavDropdown title="Categories" className={classNames({ "mx-md-4": pathname === "/" })}>
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-            </NavDropdown>
-            <Nav className={pathname === "/" ? "me-auto" : "me-3"}>
-              {menuList.map((menu) => {
-                return (
-                  <Link
-                    className={classNames("nav-link", { active: pathname === `/${menu}` })}
-                    to={menu === "Home" ? "/" : menu.replace(/[-\s]/g, "")}
-                    key={menu}
-                  >
-                    {menu}
-                  </Link>
-                );
-              })}
-            </Nav>
-            <Nav className="d-flex flex-row mt-3 mt-md-0 ms-auto">
-              {pathname === "/" && (
-                <>
-                  <Button variant="primary" className="me-2">
-                    Sign In
-                  </Button>
-                  <Button variant="warning" className="text-white">
-                    Sign Up
-                  </Button>
-                </>
-              )}
-              {pathname !== "/" && (
-                <>
-                  <InputGroup className="header-input">
-                    <Form.Control
-                      placeholder="What do you want to learn ?"
-                      aria-label="Recipient's username"
-                      aria-describedby="basic-addon2"
-                    />
-                    <div className="py-1 px-3">
-                      <img src={Search} alt="" />
-                    </div>
-                  </InputGroup>
-                  <Button variant="warning" className="text-nowrap text-white ms-3">
-                    My Profile
-                  </Button>
-                </>
-              )}
-            </Nav>
-          </Navbar.Collapse>
+          <Navbar.Offcanvas
+            id={`offcanvasNavbar-expand-xl`}
+            aria-labelledby={`offcanvasNavbarLabel-expand-xl`}
+            placement="end"
+          >
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title id={`offcanvasNavbarLabel-expand-xl`}>My Academy</Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body className="align-items-center pt-0">
+              <NavDropdown
+                title="Categories"
+                className={classNames("mb-2 mb-xl-0", { "mx-xl-4": pathname === "/" })}
+              >
+                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+              </NavDropdown>
+              <Nav className={pathname === "/" ? "me-auto" : "me-3"}>
+                {menuList.map((menu) => {
+                  return (
+                    <Link
+                      className={classNames("nav-link", { active: pathname === `/${menu}` })}
+                      to={menu === "Home" ? "/" : menu.replace(/[-\s]/g, "")}
+                      key={menu}
+                    >
+                      {menu}
+                    </Link>
+                  );
+                })}
+              </Nav>
+            </Offcanvas.Body>
+          </Navbar.Offcanvas>
+          <Nav className="d-flex flex-row  ms-auto">
+            {pathname === "/" && (
+              <>
+                <Button variant="primary" className="me-2">
+                  Sign In
+                </Button>
+                <Button variant="warning" className="text-white">
+                  Sign Up
+                </Button>
+              </>
+            )}
+            {pathname !== "/" && (
+              <>
+                <InputGroup className="header-input d-none d-lg-flex">
+                  <Form.Control
+                    placeholder="What do you want to learn ?"
+                    aria-label="Recipient's username"
+                    aria-describedby="basic-addon2"
+                  />
+                  <div className="py-1 px-3">
+                    <img src={Search} alt="" />
+                  </div>
+                </InputGroup>
+                <Button variant="warning" className="text-nowrap text-white ms-3">
+                  My Profile
+                </Button>
+              </>
+            )}
+          </Nav>
+          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-xl`} />
         </Container>
       </Navbar>
       {pathname !== "/" && (

@@ -43,7 +43,7 @@ const Footer = ({ writeUs }) => {
       {pathname !== "/" && <WriteUs />}
       <Container>
         <Row className="footer-top">
-          <Col xs={12} md={9}>
+          <Col xs={12} lg={9}>
             <Row>
               <Col xs={6} md={3} className="order-4 order-md-0">
                 <h6>About Us</h6>
@@ -100,7 +100,7 @@ const Footer = ({ writeUs }) => {
               </Col>
             </Row>
           </Col>
-          <Col xs={12} md={3} className="d-none d-md-block">
+          <Col xs={12} md={3} className="d-none d-lg-block">
             <p>Quis autem vel eum iure repre enderit voluptate</p>
             <img src={DummyImg} alt="" />
             <Button variant="link" className="text-white text-decoration-none p-0 mt-2">
