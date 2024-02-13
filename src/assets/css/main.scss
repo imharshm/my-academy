@@ -151,6 +151,9 @@ body {
       width: 300px;
       border: 1px solid rgba(143, 155, 193, 1);
       border-radius: 10px;
+      @include media-breakpoint-down(xxl) {
+        width: 200px;
+      }
       input,
       input::placeholder {
         color: #ffffff;
@@ -198,6 +201,10 @@ body {
   .nav-item {
     &:focus-visible {
       outline: none;
+    }
+    .nav-link {
+      box-shadow: none;
+      border: none;
     }
   }
 }

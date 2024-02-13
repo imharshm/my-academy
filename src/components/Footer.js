@@ -53,7 +53,7 @@ const Footer = ({ writeUs }) => {
                 </p>
                 <img src={Logo} alt="" className="d-none d-md-block" />
               </Col>
-              <Col xs={6} md={3} className="order-1 order-md-1 mb-3 mb-md-0">
+              <Col xs={6} md={3} className="order-1 order-md-1 mb-5 mb-md-0">
                 <h6>Courses</h6>
                 <ul className="ps-3">
                   {coursesList.map((course, i) => {
@@ -69,7 +69,7 @@ const Footer = ({ writeUs }) => {
                 <h6>Get In Touch</h6>
                 <ul className="list-unstyled get-in-touch__ul">
                   <li className="address">55 Main Street, 2nd Block, New York</li>
-                  <li className="email">info@CareTrainings.com</li>
+                  <li className="email text-break">info@CareTrainings.com</li>
                   <li className="phone">0203 9292013</li>
                   <li className="timing">
                     Sunday - Friday <br />

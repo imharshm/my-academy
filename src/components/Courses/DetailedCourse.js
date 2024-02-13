@@ -49,13 +49,13 @@ const DetailedCourse = () => {
                 What is Basics of Food Hygiene <br /> in Hospitality Industry
               </h2>
               <ul className="course-detailed__ul d-flex mb-4">
-                <li className="pe-4 border-end">
+                <li className="pe-2 pe-lg-4 border-end">
                   <a href="/#">
                     <img src={CourseDesc} alt="" />
                     Course Description
                   </a>
                 </li>
-                <li className="pe-4 border-end">
+                <li className="pe-2 pe-lg-4 border-end">
                   <a href="/#">
                     <img src={Target} alt="" />
                     Target Audience
@@ -246,7 +246,7 @@ const DetailedCourse = () => {
             <Button className="btn-txt-primary mb-3">Latest Courses</Button>
             <h4 className="section-title">Browser Latest Courses</h4>
           </div>
-          <Row className="justify-content-between">
+          <Row className="justify-content-center justify-content-xl-between">
             {[...Array(3)].map(() => {
               return (
                 <Col xs={12} md={4} style={{ maxWidth: "400px" }}>

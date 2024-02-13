@@ -65,37 +65,38 @@ const Header = () => {
                   );
                 })}
               </Nav>
+              <Nav className="d-flex flex-row ms-auto">
+                {pathname === "/" && (
+                  <>
+                    <Button variant="primary" className="me-2">
+                      Sign In
+                    </Button>
+                    <Button variant="warning" className="text-white">
+                      Sign Up
+                    </Button>
+                  </>
+                )}
+                {pathname !== "/" && (
+                  <>
+                    <InputGroup className="header-input d-none d-xl-flex">
+                      <Form.Control
+                        placeholder="What do you want to learn ?"
+                        aria-label="Recipient's username"
+                        aria-describedby="basic-addon2"
+                      />
+                      <div className="py-1 px-3">
+                        <img src={Search} alt="" />
+                      </div>
+                    </InputGroup>
+                    <Button variant="warning" className="text-nowrap text-white ms-3">
+                      My Profile
+                    </Button>
+                  </>
+                )}
+              </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
-          <Nav className="d-flex flex-row  ms-auto">
-            {pathname === "/" && (
-              <>
-                <Button variant="primary" className="me-2">
-                  Sign In
-                </Button>
-                <Button variant="warning" className="text-white">
-                  Sign Up
-                </Button>
-              </>
-            )}
-            {pathname !== "/" && (
-              <>
-                <InputGroup className="header-input d-none d-lg-flex">
-                  <Form.Control
-                    placeholder="What do you want to learn ?"
-                    aria-label="Recipient's username"
-                    aria-describedby="basic-addon2"
-                  />
-                  <div className="py-1 px-3">
-                    <img src={Search} alt="" />
-                  </div>
-                </InputGroup>
-                <Button variant="warning" className="text-nowrap text-white ms-3">
-                  My Profile
-                </Button>
-              </>
-            )}
-          </Nav>
+
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-xl`} />
         </Container>
       </Navbar>
