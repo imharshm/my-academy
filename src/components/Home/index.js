@@ -58,9 +58,9 @@ const Home = () => {
     <>
       <section className="home-banner">
         <div className="banner-top">CPD Provider of the Year Winner!</div>
-        <Container>
+        <Container fluid className="p-0">
           <Row>
-            <Col xs={12} md={6} className="px-4">
+            <Col xs={12} md={6} className="px-5 px-md-0">
               <div className="banner-info">
                 <h3>
                   Online <span className="highlight">health</span> and social care training that

@@ -38,6 +38,14 @@ const Footer = ({ writeUs }) => {
   ];
   const pathname = useLocation().pathname;
 
+  const handleScrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <footer>
       {pathname !== "/" && <WriteUs />}
@@ -112,9 +120,9 @@ const Footer = ({ writeUs }) => {
       <div className="copyright">
         <Container className="copyright-container">
           <div>&copy;2024 Care Trainings All rights reserved</div>
-          <div className="top-arrow">
+          <Button onClick={handleScrollTop} className="top-arrow">
             <img src={TopArrow} alt="" />
-          </div>
+          </Button>
           <div className="d-none d-md-flex">
             <ul className="list-unstyled">
               <li>
