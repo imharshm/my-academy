@@ -1,11 +1,17 @@
 import React from "react";
 import { Button, Container } from "react-bootstrap";
 import CoursesTab from "../Common/CoursesTab";
+import Banner from "../Common/Banner";
 import "./allCourses.scss";
 
 const index = () => {
   return (
     <>
+      <Banner
+        title="All Courses"
+        desc="Below is a list of all available courses"
+        breadcrumb={["Home", "All Courses"]}
+      />
       <section className="section">
         <Container>
           <div className="text-center">

@@ -14,11 +14,13 @@ import Feature1 from "../../assets/img/feature-1.svg";
 import Feature2 from "../../assets/img/feature-2.svg";
 import Feature3 from "../../assets/img/feature-3.svg";
 import SingUpOffer from "../../assets/img/sing-up-offer.svg";
+import WhyStudent from "../../assets/img/why-students.svg";
 import "./home.scss";
 import CoursesTab from "../Common/CoursesTab";
 import Testimonial from "../Common/Testimonial";
 import GlobalPartners from "../Common/GlobalPartners";
 import Blog from "../Blog";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const topCategories = [
@@ -57,7 +59,7 @@ const Home = () => {
   return (
     <>
       <section className="home-banner">
-        <div className="banner-top">CPD Provider of the Year Winner!</div>
+        <div className="banner-strip justify-content-center">CPD Provider of the Year Winner!</div>
         <Container fluid className="p-0">
           <Row>
             <Col xs={12} md={6} className="px-5 px-md-0">
@@ -110,15 +112,15 @@ const Home = () => {
           <img src={Action} alt="" />
         </Button>
       </section>
-      <section className="section">
+      <section className="section pb-0">
         <Container>
-          <h2 className="section-title">
+          <h3 className="section-title">
             Explore <br /> Our Top <span>Categories</span>
-          </h2>
+          </h3>
           <Row>
             {topCategories.map((category) => {
               return (
-                <Col className="category-card" xs={12} md={4} lg={3} key={category.title}>
+                <Col className="category-card" xs={12} md={4} lg={4} key={category.title}>
                   <Card>
                     <img src={category.icon} alt="" />
                     <div>
@@ -131,15 +133,23 @@ const Home = () => {
             })}
           </Row>
         </Container>
+        <div className="online-training mt-4">
+          <p className="m-0 text-center">
+            For Offline Training Visit our Portal :
+            <a className="text-white text-decoration-none" href="https://www.CareTrainings.com">
+              www.CareTrainings.com
+            </a>
+          </p>
+        </div>
       </section>
       <section className="section even">
         <Container>
-          <h2 className="section-title">
+          <h3 className="section-title">
             Featured <span>Courses</span>
-          </h2>
+          </h3>
           <CoursesTab />
           <div className="text-center mt-3">
-            <Button variant="warning" className="text-white">
+            <Button variant="warning" className="px-4 text-white">
               Browse all Courses
             </Button>
           </div>
@@ -176,16 +186,16 @@ const Home = () => {
         </Container>
       </section>
       <section className="section">
-        <Container className="mb-4">
+        <Container className="mb-5">
           <Row>
             <Col xs={12} md={6}>
               <div className="why-choose-us__info">
                 <Button variant="primary" className="btn-txt-primary mb-3">
                   Why Choose Us
                 </Button>
-                <h2 className="section-title text-start mb-3">
+                <h3 className="section-title text-start mb-3">
                   Why Students <span>Choose</span> Us for Gain Their Knowledge
-                </h2>
+                </h3>
                 <p>
                   Helping employees gain skills and providing career development often take a back
                   seat to business priorities but workplace better right now. Seventy percent of
@@ -201,7 +211,9 @@ const Home = () => {
                 </Button>
               </div>
             </Col>
-            <Col xs={12} md={6}></Col>
+            <Col xs={12} md={6}>
+              <img className="img-fluid p-5" src={WhyStudent} alt="" />
+            </Col>
           </Row>
         </Container>
         <Testimonial />
@@ -212,7 +224,7 @@ const Home = () => {
           <GlobalPartners />
         </Container>
       </section>
-      <section className="section even last-section">
+      {/* <section className="section even last-section">
         <Container className="sign-up-offer__wrapper">
           <Row>
             <Col xs={12} md={6} className="p-0">
@@ -220,9 +232,9 @@ const Home = () => {
             </Col>
             <Col xs={12} md={6} className="p-0">
               <div className="sign-up-offer__info h-100">
-                <h2 className="section-title mb-3">
+                <h3 className="section-title mb-3">
                   Sign up for <span>Offers</span>
-                </h2>
+                </h3>
                 <p className="text-center">
                   Join our mailing list and receive information on <br />
                   special offers and free courses.
@@ -239,7 +251,7 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
     </>
   );
 };

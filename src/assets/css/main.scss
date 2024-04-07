@@ -56,6 +56,11 @@ body {
   color: var(--primary);
   border: none;
 }
+.btn-txt-success {
+  background: rgba(212, 255, 179, 0.57);
+  color: rgba(63, 125, 60, 1);
+  border: none;
+}
 
 .highlight {
   color: rgba(255, 155, 37, 1);
@@ -126,51 +131,50 @@ body {
   );
 }
 
+.header-input {
+  width: 245px;
+  border: 1px solid rgba(143, 155, 193, 1);
+  border-radius: 10px;
+  @include media-breakpoint-down(xxl) {
+    width: 200px;
+  }
+  input,
+  input::placeholder {
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+  }
+}
+
 .header-bg {
   background: linear-gradient(rgba(14, 36, 111, 0.7), rgba(14, 36, 111, 0.7)),
     url("../img/header-bg.svg") center/cover no-repeat;
-  .navbar {
-    background-color: transparent;
-    .nav-link {
-      color: #ffffff;
-      &.active {
-        color: #ffffff;
-        &::before {
-          background: url("../img/heart-light.svg");
-        }
-      }
-    }
-    .navbar-toggler {
-      .navbar-toggler-icon {
-        @include media-breakpoint-down(lg) {
-          filter: invert(1) brightness(16) saturate(0.5);
-        }
-      }
-    }
-    .header-input {
-      width: 300px;
-      border: 1px solid rgba(143, 155, 193, 1);
-      border-radius: 10px;
-      @include media-breakpoint-down(xxl) {
-        width: 200px;
-      }
-      input,
-      input::placeholder {
-        color: #ffffff;
-        font-size: 14px;
-        background-color: transparent;
-        border: none;
-      }
-    }
+  padding: 7rem;
+  @include media-breakpoint-down(md) {
+    padding: 7rem 0 7rem;
+  }
+  &.pricing-bg {
+    background: linear-gradient(rgba(14, 36, 111, 0.7), rgba(14, 36, 111, 0.7)),
+      url("../img/pricing-bg.svg") center/cover no-repeat;
+  }
+  &.about-bg {
+    background: linear-gradient(rgba(14, 36, 111, 0.7), rgba(14, 36, 111, 0.7)),
+      url("../img/about-bg.svg") center/cover no-repeat;
+  }
+  &.blog-bg {
+    background: linear-gradient(rgba(14, 36, 111, 0.7), rgba(14, 36, 111, 0.7)),
+      url("../img/blog-bg.svg") -150px 50px / cover no-repeat;
+  }
+  &.contact-bg {
+    background: linear-gradient(rgba(14, 36, 111, 0.7), rgba(14, 36, 111, 0.7)),
+      url("../img/contact-bg.svg") -150px 50px / cover no-repeat;
+  }
+  &.faq-bg {
+    background: linear-gradient(rgba(14, 36, 111, 0.7), rgba(14, 36, 111, 0.7)),
+      url("../img/faq-bg.svg") -150px 50px / cover no-repeat;
   }
   .desc {
     color: #a7c8ff;
-  }
-  .title-container {
-    padding: 7rem;
-    @include media-breakpoint-down(md) {
-      padding: 4rem 0 7rem;
-    }
   }
 }
 
@@ -184,6 +188,7 @@ body {
   @include navLink();
   .nav-link {
     margin: 0 0.5rem;
+    font-size: 14px;
   }
   .navbar-toggler {
     border: none;
@@ -265,20 +270,26 @@ footer {
       }
     }
     .follow-us__ul {
-      display: flex;
       li {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        width: 35px;
-        height: 35px;
-        background: #28387e;
-        &:not(:last-child) {
+        img {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          width: 35px;
+          height: 35px;
+          background: #28387e;
+          padding: 5px;
           margin-right: 0.5rem;
         }
+        &:not(:last-child) {
+          margin-bottom: 1.5rem;
+        }
         a {
+          color: #ffffff;
           display: flex;
+          align-items: center;
+          text-decoration: none;
         }
       }
     }
@@ -287,10 +298,8 @@ footer {
     background: #071a55;
     .copyright-container {
       color: #ffffff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       padding: 0.75rem 1rem;
+      text-align: center;
       @include media-breakpoint-down(md) {
         padding: 2rem 1rem;
         justify-content: center;
@@ -456,4 +465,37 @@ footer {
       content: "\e3c9";
     }
   }
+}
+
+.text-muted {
+  color: rgba(125, 128, 134, 1) !important;
+}
+
+$variants: (
+  "warning" rgba(255, 155, 37, 0.12) rgba(171, 95, 5, 1),
+  "success" rgba(212, 255, 179, 0.57) rgba(63, 125, 60, 1)
+);
+
+@each $name, $bgColor, $textColor in $variants {
+  .badge.badge-#{$name} {
+    color: $textColor;
+    background-color: $bgColor;
+  }
+}
+
+.contact-form {
+  .form-control {
+    border: none;
+    border-radius: 0.5rem;
+    background: rgba(243, 244, 248, 1);
+    resize: none;
+    padding: 0.75rem 1.25rem;
+    &::placeholder {
+      color: rgba(108, 109, 114, 1);
+    }
+  }
+}
+
+.contact-info {
+  background: url("../img/dots.svg") top 10px right no-repeat;
 }

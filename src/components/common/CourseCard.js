@@ -3,7 +3,7 @@ import { Row, Card, Badge } from "react-bootstrap";
 import CourseImg from "../../assets/img/course-1.svg";
 import Star from "../../assets/img/star.svg";
 import Clock from "../../assets/img/clock-gray.svg";
-import Books from "../../assets/img/books.svg";
+import CreditCard from "../../assets/img/CreditCard.svg";
 import RightArrow from "../../assets/img/right-arrow.svg";
 import { Link } from "react-router-dom";
 
@@ -13,7 +13,10 @@ const CourseCard = ({ footer, timing }) => {
       <Card.Img src={CourseImg}></Card.Img>
       <Card.Body>
         <div className="d-flex align-items-center justify-content-between mb-2">
-          <Badge bg="">Hygiene</Badge>
+          <Badge bg="" className="badge-warning">
+            {/* other variant use className badge-success, badge-danger, or check in main.scss file*/}
+            Level 1
+          </Badge>
           <span className="rating">
             <img className="me-1" src={Star} alt="" />
             4.9(25)
@@ -37,8 +40,8 @@ const CourseCard = ({ footer, timing }) => {
         <Card.Footer className="py-0">
           <Row>
             <div className="col border-end d-flex align-items-center justify-content-center py-2">
-              <img src={Books} alt="" className="me-2" />
-              <small>9 Modules</small>
+              <img src={CreditCard} alt="" className="me-2" />
+              <small>For 1 Credit</small>
             </div>
             <div className="col py-2 text-center">
               <Link

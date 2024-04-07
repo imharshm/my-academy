@@ -1,14 +1,16 @@
 import React from "react";
 import { Button, Card, Col, Container, Image, Row } from "react-bootstrap";
-import Book from "../assets/img/book.svg";
-import Team from "../assets/img/team.svg";
 import Testimonial from "./Common/Testimonial";
 import GlobalPartners from "./Common/GlobalPartners";
 import GetHelpVideo from "./Courses/GetHelpVideo";
+import Banner from "./Common/Banner";
+import About1 from "../assets/img/about-learn-1.svg";
+import About2 from "../assets/img/about-learn-2.svg";
 
 const About = () => {
   return (
     <>
+      <Banner title="About" breadcrumb={["Home", "About Us"]} className="about-bg" />
       <section className="section">
         <Container>
           <Row>
@@ -65,52 +67,62 @@ const About = () => {
             Opportunity For Online <span>Learning</span>
           </h4>
           <Row>
-            {[...Array(3)].map((_, i) => {
-              return (
-                <Col xs={12} md={4} className="mb-3 mb-md-0" key={i}>
-                  <Card>
-                    <Card.Body className="p-4 pb-3">
-                      <Image src={Book} width={40} className="mb-3" />
-                      <h6 className="fw-bold mb-2">Experts Minds</h6>
-                      <p>Sed ut persiciatis omnis natus voluptate accsantie doloreue laudantium</p>
-                      <Button variant="link" className="p-0">
-                        <i className="material-icons text-warning">east</i>
-                      </Button>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              );
-            })}
+            <Col xs={12} md={4} className="mb-3 mb-md-0">
+              <Card>
+                <Card.Body className="p-4 pb-3">
+                  <Image src={About1} width={40} className="mb-3" />
+                  <h6 className="fw-bold mb-2">Care Trainings</h6>
+                  <p>
+                    Care Trainings is a leading training and apprenticeship provider based in London
+                    operating across the whole of England.
+                  </p>
+                  <Button variant="link" className="p-0">
+                    <i className="material-icons text-success">east</i>
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={12} md={4} className="mb-3 mb-md-0">
+              <Card>
+                <Card.Body className="p-4 pb-3">
+                  <Image src={About2} width={40} className="mb-3" />
+                  <h6 className="fw-bold mb-2">Universal Vibes</h6>
+                  <p>
+                    Care Trainings is a leading training and apprenticeship provider based in London
+                    operating across the whole of England.
+                  </p>
+                  <Button variant="link" className="p-0">
+                    <i className="material-icons text-danger">east</i>
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={12} md={4} className="mb-3 mb-md-0">
+              <Card>
+                <Card.Body className="p-4 pb-3">
+                  <Image src={About1} width={40} className="mb-3" />
+                  <h6 className="fw-bold mb-2">My Academy</h6>
+                  <p>
+                    Care Trainings is a leading training and apprenticeship provider based in London
+                    operating across the whole of England.
+                  </p>
+                  <Button variant="link" className="p-0">
+                    <i className="material-icons text-primary">east</i>
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
           </Row>
         </Container>
       </section>
       <section className="section light-gray-section">
-        <Container className="mb-5">
-          <div className="text-center mb-3">
-            <Button className="btn-txt-primary">Meet Our Team</Button>
-          </div>
-          <h4 className="section-title">
-            We’ve Thousands Of Experience <br />
-            <span>Team</span> Members
-          </h4>
-          <Row>
-            {[...Array(4)].map((_, i) => {
-              return (
-                <Col xs={12} md={3} className="mb-3 m-md-0" key={i}>
-                  <Card className="border-0 text-center">
-                    <Image src={Team} className="rounded team-member-img mb-3" />
-                    <h4 className="fw-bold font-18 m-0">Roger Korsgaard</h4>
-                    <span className="text-primary">Senior Manager</span>
-                  </Card>
-                </Col>
-              );
-            })}
-          </Row>
-          <GetHelpVideo />
-        </Container>
+        <GetHelpVideo />
+      </section>
+
+      <section className="section even">
         <Testimonial />
       </section>
-      <section className="section even">
+      <section className="section">
         <Container>
           <GlobalPartners />
         </Container>

@@ -2,10 +2,12 @@ import React from "react";
 import { Accordion, Button, Col, Container, Form, Image, Row, Tab, Tabs } from "react-bootstrap";
 import GetHelpVideo from "./Courses/GetHelpVideo";
 import Call from "../assets/img/banner/phonecall.svg";
+import Banner from "./Common/Banner";
 
 const FAQs = () => {
   return (
     <>
+      <Banner title="FAQ'S" breadcrumb={["Home", "FAQ's"]} className="faq-bg" />
       <section className="section">
         <Container>
           <div className="text-center">
@@ -17,57 +19,42 @@ const FAQs = () => {
             Frequently Asked <span>Questions</span>
           </h2>
           <div className="mb-5">
-            <Tabs defaultActiveKey="course-req" className="featured-course__tab mb-4">
-              <Tab eventKey="course-req" title="Course Requirements">
-                <Accordion className="row" defaultActiveKey="1">
-                  <Col xs={12} md={6} className="mb-3 mb-md-0">
-                    {[...Array(6)].map((_, i) => {
-                      return (
-                        <Accordion.Item eventKey={1} key={i}>
-                          <Accordion.Header>Accordion Item {i + 1}</Accordion.Header>
-                          <Accordion.Body>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                            occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum.
-                          </Accordion.Body>
-                        </Accordion.Item>
-                      );
-                    })}
-                  </Col>
-                  <Col xs={12} md={6}>
-                    {[...Array(6)].map((_, i) => {
-                      return (
-                        <Accordion.Item eventKey={0} key={i}>
-                          <Accordion.Header>Accordion Item {i + 1}</Accordion.Header>
-                          <Accordion.Body>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                            occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum.
-                          </Accordion.Body>
-                        </Accordion.Item>
-                      );
-                    })}
-                  </Col>
-                </Accordion>
-              </Tab>
-              <Tab eventKey="about" title="About">
-                Tab content for Profile
-              </Tab>
-              <Tab eventKey="instructors" title="Instructors">
-                Tab content for Loooonger Tab
-              </Tab>
-              <Tab eventKey="pricing-package" title="Pricing Package">
-                Tab content for Loooonger Tab
-              </Tab>
-            </Tabs>
+            <Accordion className="row" defaultActiveKey="1">
+              <Col xs={12} md={6} className="mb-3 mb-md-0">
+                {[...Array(6)].map((_, i) => {
+                  return (
+                    <Accordion.Item eventKey={1} key={i}>
+                      <Accordion.Header>Accordion Item {i + 1}</Accordion.Header>
+                      <Accordion.Body>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </Accordion.Body>
+                    </Accordion.Item>
+                  );
+                })}
+              </Col>
+              <Col xs={12} md={6}>
+                {[...Array(6)].map((_, i) => {
+                  return (
+                    <Accordion.Item eventKey={0} key={i}>
+                      <Accordion.Header>Accordion Item {i + 1}</Accordion.Header>
+                      <Accordion.Body>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </Accordion.Body>
+                    </Accordion.Item>
+                  );
+                })}
+              </Col>
+            </Accordion>
           </div>
           <GetHelpVideo />
         </Container>

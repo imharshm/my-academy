@@ -1,22 +1,23 @@
 @import "~bootstrap/scss/bootstrap-grid.scss";
 
 .write-us__wrapper {
-  background: var(--primary);
+  background: var(--primary) url("../../assets/img/white-us.svg") no-repeat right;
   color: #ffffff;
   border-radius: 15px;
   height: 180px;
+  width: 900px;
   display: flex;
-  justify-content: center;
-  padding: 1.5rem;
+  padding: 2rem 4rem;
   @include media-breakpoint-down(lg) {
     height: 120px;
     padding: 1.2rem;
   }
   .write-us__info {
-    max-width: 650px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 4rem;
     h4 {
       line-height: 1.5;
       @include media-breakpoint-down(lg) {
@@ -77,52 +78,21 @@
   }
 }
 
-.student-feedback__wrapper {
-  .student-feedback__info {
-    display: flex;
-    .student-feedback__rating {
-      background: #01cc83;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 5rem;
-      @include media-breakpoint-down(lg) {
-        padding: 1rem;
-      }
-      @include media-breakpoint-down(md) {
-        padding: 0.5rem;
-      }
+.trainee-feedback__wrapper {
+  .star {
+    color: #ffaa2a;
+    @include media-breakpoint-down(md) {
+      font-size: 12px;
     }
   }
-  .student-feedback__data {
-    font-size: 14px;
-    padding: 0 2.5rem;
-    @include media-breakpoint-down(lg) {
-      font-size: 12px;
-      padding: 0 1rem;
-    }
-    .user-rating {
+  .trainee-feedback__card {
+    .feedback-user__info {
       display: flex;
       align-items: center;
+      margin-bottom: 0.5rem;
       img {
-        @include media-breakpoint-down(md) {
-          width: 40px;
-        }
-      }
-    }
-    .star {
-      color: #ffaa2a;
-      font-size: 18px;
-      @include media-breakpoint-down(md) {
-        font-size: 12px;
-      }
-    }
-    .progress {
-      width: 175px;
-      height: 5px;
-      @include media-breakpoint-down(md) {
-        width: 80px;
+        width: 50px;
+        margin-right: 0.5rem;
       }
     }
   }
@@ -138,10 +108,14 @@
       font-size: 20px;
       margin-right: 0.25rem;
     }
-    td:nth-child(2) {
-      width: 40%;
-      text-align: right;
-      font-weight: 600;
+    td {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      &:nth-child(2) {
+        width: 40%;
+        text-align: right;
+        font-weight: 600;
+      }
     }
   }
 }
@@ -217,5 +191,18 @@
     .card-body {
       background: rgba(247, 248, 251, 1);
     }
+  }
+}
+
+.course-progress {
+  background: rgba(255, 245, 232, 1) !important;
+  .progress-bar {
+    border-radius: 10px;
+  }
+}
+
+.pricing-card {
+  button {
+    font-size: 0.8rem !important;
   }
 }

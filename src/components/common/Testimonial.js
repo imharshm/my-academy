@@ -5,14 +5,14 @@ import Rating from "../../assets/img/5-star.svg";
 
 const Testimonial = () => {
   return (
-    <Container className="mb-5">
+    <Container>
       <div className="text-center">
         <Button variant="outline-primary" className="btn-txt-primary mb-3">
           Testimonials
         </Button>
       </div>
       <h2 className="section-title">
-        What People Think and <span>Say</span>
+        What Students Think and <span>Say</span>
         <br />
         About My Academy
       </h2>
