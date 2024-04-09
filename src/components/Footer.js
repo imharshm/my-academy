@@ -23,14 +23,14 @@ const Footer = () => {
         <Row className="footer-top">
           <Col xs={12} lg={9}>
             <Row>
-              <Col xs={6} md={3} className="order-4 order-md-0">
-                <img src={Logo} alt="" className="d-none d-md-block mb-3" />
+              <Col xs={6} md={3}>
+                <img src={Logo} alt="" className="mb-3" />
                 <p className="m-0">
                   Sit amet consectetur adipiscin seeiusmod tempor incididunt ut dolore magna aliqu
                   asusp disse ultrices gravida commodo
                 </p>
               </Col>
-              <Col xs={6} md={3} className="order-1 order-md-1 mb-5 mb-md-0">
+              <Col xs={6} md={3} className="mb-5 mb-md-0">
                 <h6>Menu</h6>
                 <ul className="ps-3">
                   <li className="mb-3">Home</li>
@@ -39,7 +39,7 @@ const Footer = () => {
                   <li className="mb-3">Blogs</li>
                 </ul>
               </Col>
-              <Col xs={6} md={3} className="order-2 order-md-2">
+              <Col xs={6} md={3} className="order-3 order-md-2">
                 <h6>Information</h6>
                 <ul className="ps-3">
                   <li className="mb-3">About Us</li>
@@ -48,7 +48,7 @@ const Footer = () => {
                   <li className="mb-3">Privacy Policy</li>
                 </ul>
               </Col>
-              <Col xs={6} md={3} className="order-3 order-md-3">
+              <Col xs={6} md={3} className="order-2 order-md-3">
                 <h6>Get In Touch</h6>
                 <ul className="list-unstyled get-in-touch__ul">
                   <li className="address">55 Main Street, 2nd Block, New York</li>
@@ -62,26 +62,25 @@ const Footer = () => {
               </Col>
             </Row>
           </Col>
-          <Col xs={12} md={3} className="d-none d-lg-block ps-5">
-            <h6>Follow Us</h6>
-            <ul className="list-unstyled follow-us__ul">
-              <li>
+          <Col xs={12} md={3} className="ps-md-5">
+            <h6 className="mt-5 mt-md-0">Follow Us</h6>
+            <ul className="list-unstyled follow-us__ul d-flex d-md-block">
+              <li className="col">
                 <a href="/#">
                   <img src={FB} alt="" /> Facebook
                 </a>
               </li>
-              <li>
+              <li className="col">
                 <a href="/#">
                   <img src={IG} alt="" /> Instagram
                 </a>
               </li>
-              <li>
+              <li className="col">
                 <a href="/#">
                   <img src={LinkedIn} alt="" /> LinkedIn
                 </a>
               </li>
             </ul>
-            <img src={Logo} alt="" className="d-block d-md-none" />
           </Col>
         </Row>
       </Container>

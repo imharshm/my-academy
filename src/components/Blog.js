@@ -4,10 +4,10 @@ import CourseCard from "./Common/CourseCard";
 import Banner from "./Common/Banner";
 import { Link } from "react-router-dom";
 
-const Blog = () => {
+const Blog = ({ banner }) => {
   return (
     <>
-      <Banner title="Blog" breadcrumb={["Home", "Blog"]} className="blog-bg" />
+      {banner && <Banner title="Blog" breadcrumb={["Home", "Blog"]} className="blog-bg" />}
       <section className="section even">
         <Container>
           <div className="text-center">

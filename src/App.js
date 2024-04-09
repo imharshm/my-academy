@@ -61,7 +61,7 @@ const App = () => {
         },
         {
           path: "/Blog",
-          element: <Blog />,
+          element: <Blog banner />,
         },
         {
           path: "/Blog/BlogDetails",

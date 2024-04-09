@@ -24,7 +24,7 @@ const MyCourses = () => {
           <Row>
             {[...Array(10)].map(() => {
               return (
-                <Col xs={12} md={3}>
+                <Col xs={12} md={6} lg={3}>
                   <Link className="text-decoration-none" to="/MyCourses/MyCoursesDetails">
                     <Card className="my-course__card mb-3">
                       <Card.Header>
